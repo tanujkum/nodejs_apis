@@ -15,7 +15,7 @@ const apiLimiter = rateLimit({
 
 
 app.get('/',apiLimiter,async(req,res)=>{
-    return res.json({success:true,message:"Hello from Backend after CI/CD workflow"})
+    return res.json({success:true,message:"Hello, after CI/CD workflow"})
 })
 
 
