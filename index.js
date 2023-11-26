@@ -15,7 +15,7 @@ const apiLimiter = rateLimit({
 
 
 app.get('/',apiLimiter,async(req,res)=>{
-    return res.json({status:true,message:"Hello from Backend"})
+    return res.json({success:true,message:"Hello from Backend after CI/CD workflow"})
 })
 
 
@@ -23,7 +23,7 @@ app.use('/user',router)
 
 
 
-const PORT = 2000;
+const PORT = process.env.PORT;;
 app.listen(PORT,()=>{
     console.log(`App is running on port ${PORT}`)
 })
